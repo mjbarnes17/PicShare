@@ -1,24 +1,21 @@
-<div class="parallax-container">
-  <div class="parallax"><%= image_tag "dark-road.jpg" %></div>
-    <nav class="white" role="navigation">
-	    <div class="nav-wrapper container">
-	      <a href="#!" class="brand-logo deep-orange-text">PicShare</a>
-	      <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="deep-orange-text material-icons">menu</i></a>
-	      <ul class="right hide-on-med-and-down">
-	        <li><a href="#" class="deep-orange-text">Log In</a></li>
-	        <li><a href="#" class="deep-orange-text">Sign Up</a></li>
-	      </ul>
-	      <ul class="side-nav" id="mobile-demo">
-					<li><a href="#">Log In</a></li>
-	        <li><a href="#">Sign Up</a></li>
-	      </ul>
-	    </div>
-	  </nav>
-	  <div class="caption center-align main-caption">
-			<h1 class="white-text main-caption-logo">PicShare</h1>
-	    <h5 class="light grey-text text-lighten-2">Here's our small slogan.</h5>
-			<br>
-			<a href="login.html" class="waves-effect waves-light btn-large deep-orange lighten-1 login-btn">Login</a>
-			<a href="signup.html" class="waves-effect waves-light btn-large deep-orange lighten-1">Sign up!</a>
-	  </div>
-  </div>
+
+<div class="navbar-fixed">
+   <nav class="white" role="navigation">
+	   <div class="nav-wrapper container">
+	     <%= link_to 'Pichares',root_path, class: 'brand-logo deep-orange-text' %>
+	     <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="deep-orange-text material-icons">menu</i></a>
+	     <ul class="right hide-on-med-and-down">
+	       	<li><%= link_to 'Login', new_user_session_path, class: 'deep-orange-text' %>Log In</a></li>
+	       	<li><%= link_to 'Sign Up!', new_user_registration_path, class: 'deep-orange-text' %>Sign Up</a></li>
+	     		<li><%= link_to 'Home',root_path, class: 'brand-logo deep-orange-text' %></li>
+	     </ul>
+	     <ul class="side-nav" id="mobile-demo">
+	     		<li><%= link_to 'Home',root_path %></li>
+	     		<li><%= link_to 'Login', new_user_session_path %></li>
+	       	<li><%= link_to 'Sign Up!', new_user_registration_path %></li>
+	     </ul>
+	   </div>
+	 	</nav>
+</div>
+
+  
