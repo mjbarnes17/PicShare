@@ -1,1 +1,10 @@
 @import "materialize";
+
+body {
+  height: 6000px;
+}
+
+.parallax-container {
+  height: 600px;
+  background: fixed no-repeat center;
+}
