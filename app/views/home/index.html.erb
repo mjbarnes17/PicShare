@@ -1,12 +1,24 @@
 <div class="parallax-container">
-  <div class="parallax"><%= image_tag "dark-road.jpg" %></div>
-  <div class="lcaption center-align main-caption">
-	 <h1 class="white-text main-caption-logo">Welcome to PicShare</h1>
-	 <h5 class="light grey-text text-lighten-2">Here's our small slogan.</h5>
-	 <br>
 	 
-	 <%= link_to 'Login', new_user_session_path, class: 'waves-effect waves-light btn-large login-btn' %>
-	 <%= link_to 'Sign Up!', new_user_registration_path, class: 'waves-effect waves-light btn-large deep-orange lighten-1' %>
+	 
+	 <% if user_signed_in? %>
+	 
+	   <div class="parallax"><%= image_tag "view.jpg" %></div>
+	   <div class="lcaption center-align main-caption">
+    	 <h1 class="white-text main-caption-logo">Hello!</h1>
+    	 <h5 class="light grey-text text-lighten-2">Here's a look at todays posts!</h5>
+    	 <br>
+	   <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'waves-effect waves-light btn-large login-btn' %>
+	   <%= link_to 'Edit Account', edit_user_registration_path, method: :delete, class: 'waves-effect waves-light btn-large' %>
+	 <% else %>
+	   <div class="parallax"><%= image_tag "dark-road.jpg" %></div>
+	   <div class="lcaption center-align main-caption">
+    	 <h1 class="white-text main-caption-logo">PicShare</h1>
+    	 <h5 class="light grey-text text-lighten-2">Here's our small slogan.</h5>
+    	 <br>
+	   <%= link_to 'Login', new_user_session_path, class: 'waves-effect waves-light btn-large login-btn' %>
+	   <%= link_to 'Sign Up!', new_user_registration_path, class: 'waves-effect waves-light btn-large deep-orange lighten-1' %>
+	 <%end %>
 
   </div>
 </div>
