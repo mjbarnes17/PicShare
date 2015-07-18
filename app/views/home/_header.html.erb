@@ -7,13 +7,14 @@
 	     <ul class="right hide-on-med-and-down">
 	     
 	     	<li><%= link_to 'Home',root_path, class: 'deep-orange-text' %></li>
-	     	<!-- if user is signed in then they should be able to see only the logout button -->
+	     	<!-- if user is signed in then they should be able to see the logout, edit account, view posts, & add post links -->
 	     	<% if user_signed_in? %>
 	     		<li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'deep-orange-text' %></li>
 	     		<li><%= link_to 'Edit Account', edit_user_registration_path, method: :delete, class: 'deep-orange-text' %></li>
+	     		<li><%= link_to 'View Posts', posts_path, class: 'deep-orange-text' %></li>
+	     		<li><%= link_to 'Create Post', new_post_path, class: 'deep-orange-text' %></li>
 	     	<% else %>
 	     		<li><%= link_to 'Login', new_user_session_path, class: 'deep-orange-text' %></li>
-	       	<li><%= link_to 'Sign Up!', new_user_registration_path, class: 'deep-orange-text' %></li>
 	       	<li><%= link_to 'Sign Up!', new_user_registration_path, class: 'deep-orange-text' %></li>
 	     	<% end %>
 	       	
@@ -21,10 +22,12 @@
 	     <ul class="side-nav" id="mobile-demo">
 	     		
 	     		<li><%= link_to 'Home',root_path %></li>
-		     	<!-- if user is signed in then they should be able to see only the logout button -->
+		     	<!-- if user is signed in then they should be able to see only the logout, edit account, view posts, & add post links -->
 		     	<% if user_signed_in? %>
 		     		<li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
 		     		<li><%= link_to 'Edit Account', edit_user_registration_path %></li>
+		     		<li><%= link_to 'View Posts', posts_path %></li>
+		     		<li><%= link_to 'Create Post', new_post_path %></li>
 		     	<% else %>
 		     		<li><%= link_to 'Login', new_user_session_path %></li>
 		       	<li><%= link_to 'Sign Up!', new_user_registration_path %></li>
