@@ -4,7 +4,19 @@ body {
   height: 6000px;
 }
 
+.main-caption {
+  padding-top: 55px;
+}
+
+.main-caption-logo {
+  font-size: 85px;
+  font-weight: 200;
+}
+
 .parallax-container {
-  height: 600px;
-  background: fixed no-repeat center;
+  background-color: rgba(0,0,0,0.45);
+}
+
+.login-btn {
+    margin-right: 20px;
 }
